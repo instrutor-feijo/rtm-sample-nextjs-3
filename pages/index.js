@@ -8,7 +8,7 @@ const Cover = () => {
       .then((response) => response.json())
       .then((data) => {
         //console.log(JSON.stringify(data))
-        document.getElementById("result").innerHTML = response.json();
+        document.getElementById("result").innerHTML = JSON.stringify(data);
       })
       .catch((error) => console.error(error));
   };
