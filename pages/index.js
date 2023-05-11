@@ -6,7 +6,9 @@ const Cover = () => {
   const onButtonContainedTextAndIcoClick = (e) => {
     fetch("https://nodejs-api-beige.vercel.app/departamentos")
       .then((response) => {
-        document.getElementById("result").innerHTML = response.json();
+        document.getElementById("result").innerHTML = JSON.stringify(
+          response.json()
+        );
       })
       .then((data) => console.log(data))
       .catch((error) => console.error(error));
