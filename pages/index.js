@@ -5,12 +5,11 @@ import { Dropdown, DropdownButton, SplitButton } from "react-bootstrap";
 const Cover = () => {
   const onButtonContainedTextAndIcoClick = (e) => {
     fetch("https://nodejs-api-beige.vercel.app/departamentos")
-      .then((response) => {
-        document.getElementById("result").innerHTML = JSON.stringify(
-          response.json()
-        );
+      .then((response) => response.json())
+      .then((data) => {
+        //console.log(JSON.stringify(data))
+        document.getElementById("result").innerHTML = response.json();
       })
-      .then((data) => console.log(data))
       .catch((error) => console.error(error));
   };
 
