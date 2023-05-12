@@ -1,6 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button as MuiButton, Icon, TextField } from "@mui/material";
-import { Dropdown, DropdownButton, SplitButton } from "react-bootstrap";
+import { Button, Icon, TextField } from "@mui/material";
 
 const Cover = () => {
   const onButtonContainedTextAndIcoClick = (e) => {
@@ -32,7 +30,7 @@ const Cover = () => {
           position: "absolute",
           top: "26px",
           left: "0px",
-          backgroundColor: "#f3f3f3",
+          backgroundColor: "#efefef",
           width: "1024px",
           height: "768px",
         }}
@@ -60,28 +58,10 @@ const Cover = () => {
       >
         Real Time Manager
       </div>
-      <DropdownButton
+      <Button
         style={{
-          width: "121px",
-          display: "flex",
-          flexDirection: "column",
           position: "absolute",
           top: "174px",
-          left: "32px",
-        }}
-        title="Dropdown"
-        variant="primary"
-        align="start"
-        drop="down"
-      >
-        <Dropdown.Item>A</Dropdown.Item>
-        <Dropdown.Item>B</Dropdown.Item>
-        <Dropdown.Item>C</Dropdown.Item>
-      </DropdownButton>
-      <MuiButton
-        style={{
-          position: "absolute",
-          top: "247px",
           left: "32px",
           cursor: "pointer",
         }}
@@ -93,7 +73,7 @@ const Cover = () => {
         onClick={onButtonContainedTextAndIcoClick}
       >
         CALL API
-      </MuiButton>
+      </Button>
       <TextField
         style={{ position: "absolute", top: "174px", left: "432px" }}
         sx={{ width: 562 }}
