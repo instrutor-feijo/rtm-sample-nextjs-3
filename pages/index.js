@@ -2,11 +2,12 @@ import { Button, Icon, TextField } from "@mui/material";
 
 const Cover = () => {
   const onButtonContainedTextAndIcoClick = (e) => {
-    fetch("https://nodejs-api-beige.vercel.app/departamentos")
+    document.getElementById("result").value = "Loading";
+    fetch("https://nodejs-api-beige.vercel.app/edge-functions")
       .then((response) => response.json())
       .then((data) => {
         //console.log(JSON.stringify(data))
-        document.getElementById("result").innerHTML = JSON.stringify(data);
+        document.getElementById("result").value = JSON.stringify(data);
       })
       .catch((error) => console.error(error));
   };
